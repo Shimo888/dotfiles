@@ -1,0 +1,51 @@
+"https://zenn.dev/sdb_blog/articles/003-idea_with_vim"
+" Source your .vimrc
+source ~/.vimrc
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+"" -- Map IDE actions to IdeaVim -- http://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+" ノーマルモードで、evを押すと、~/.ideavimrcを垂直分割で開く 
+nnoremap <Leader>ev :<C-u>vsplit ~/.ideavimrc<CR>
+
+" ノーマルモードで、svを押すと、~/.ideavimrcをリロードする
+nnoremap <Leader>sv :<C-u>source ~/.ideavimrc<CR>
+
+" 定義/インターフェースの実装に移動する 
+nmap gi <Action>(GotoImplementation)
+
+"　ファイル内のGitの変更箇所に移動する
+nmap [c <Action>(VcsShowPrevChangeMarker)
+nmap ]c <Action>(VcsShowNextChangeMarker)
+
+" ファイル内のエラー箇所に移動する
+nmap [e <Action>(GotoPreviousError)
+nmap ]e <Action>(GotoNextError)
+
+" ツリービュー上の次の要素にジャンプ
+nmap [t <Action>(SelectPrevious)
+nmap ]t <Action>(SelectNext)
+
+"" 次のメンバーに移動する
+nmap [r <Action>(MethodUp)
+nmap ]r <Action>(MethodDown)
+
+" タブ移動  
+nmap X <Action>(CloseContent)"(閉じる)
+nmap C <Action>(ReopenClosedTab)"(再度開く)
+
+" Press `f` to activate AceJump
+map f <Action>(AceAction)
+map F <Action>(AceTargetAction)
