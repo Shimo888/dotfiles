@@ -6,6 +6,8 @@ source ~/.vimrc
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
+" NERDTree
+Plug 'preservim/nerdtree'
 
 "" -- Map IDE actions to IdeaVim -- http://jb.gg/abva4t
 "" Map \r to the Reformat Code action
@@ -42,10 +44,13 @@ nmap ]t <Action>(SelectNext)
 nmap [r <Action>(MethodUp)
 nmap ]r <Action>(MethodDown)
 
-" タブ移動  
+" タブ移動 
 nmap X <Action>(CloseContent)"(閉じる)
 nmap C <Action>(ReopenClosedTab)"(再度開く)
 
 " Press `f` to activate AceJump
-map f <Action>(AceAction)
-map F <Action>(AceTargetAction)
+nmap f <Action>(AceAction)
+nmap F <Action>(AceTargetAction)
+
+" Toggle NERDTree
+nmap sk :NERDTree<CR>
