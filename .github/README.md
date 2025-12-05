@@ -16,6 +16,6 @@ Use the `dotfiles` command instead of `git`.
 ```bash
 # Example
 dotfiles status
-dotfiles add .vimrc
+dotfiles add -f .vimrc
 dotfiles commit -m "Update settings"
 ```
