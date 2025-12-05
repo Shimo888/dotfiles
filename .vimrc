@@ -1,6 +1,10 @@
 set number 
 syntax enable
 
+" 移動
+nnoremap <C-j> <C-d>
+nnoremap <C-k> <C-u>
+
 " タブ移動
 nnoremap J :tabprevious<CR>
 nnoremap K :tabnext<CR>
