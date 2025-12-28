@@ -6,7 +6,10 @@ Manage configuration files directly in the home directory using a **bare git rep
 ## Setup
 
 ```zsh
+# clone repository 
 git clone --bare git@github.com:Shimo888/dotfiles.git $HOME/.dotfiles.git
+# override settings 
+dotfiles checkout -f
 ```
 
 ## Usage
